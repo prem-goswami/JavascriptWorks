@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bgContainer .loginContainer {
+    width: 400px;
+    height: 450px;
+    font-family: 'Roboto' sans-serif;
+}
+
+.loginContainer .headerContainer {
+    background-color: rgb(38, 38, 195);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+.headerContainer h1 {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.headerContainer .headerImage {
+    height: 30px;
+}
+
+.loginContainer .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyContainer .googleAccountContainer {
+    height: 40px;
+    display: flex;
+    background-color: rgb(75, 75, 209);
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+}
+
+.googleAccountContainer .googleIcon {
+    height: 25px;
+    margin-right: 10px;
+}
+.errorMsg {
+    color: red;
+    font-size: 12px;
+}
+.correct {
+    border: 2px green solid;
+}
+
+.incorrect {
+    border: 2px red solid;
+}
