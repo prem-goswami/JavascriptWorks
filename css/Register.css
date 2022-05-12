@@ -1,0 +1,23 @@
+.bgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgContainer .formContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 50%;
+    border: 2px solid burlywood;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.correct {
+    border: 2px green solid;
+}
+
+.incorrect {
+    border: 2px red solid;
+}
