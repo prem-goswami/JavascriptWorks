@@ -1,4 +1,4 @@
-
+    
 function result() {
     gridOptions.api.setQuickFilter(
         document.getElementById('searchBox').value)
@@ -33,13 +33,8 @@ const gridOptions = {
     groupSelectsChildren: true,
     rowSelection: 'multiple',
     pagination: true,
-    paginationPageSize : 10,
-    getRowStyle : params => {
-        if(params.node.rowIndex % 2 === 0) {
-            return {background : 'lightgray'};
-        }
-    }
-    
+    animateRows : true,
+    paginationPageSize : 5,
 };  
 
 

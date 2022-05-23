@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bgContainer .loginContainer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+ .headerContainer {
+    background-color: rgb(93, 93, 183);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    color: white;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.headerContainer h1 {
+    font-size: 22px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+ .headerImage {
+    height: 30px;
+    margin-right: 10px;
+}
+.bgContainer .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bodyContainer .googleAccountContainer {
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(93, 93, 183);
+    color: white;
+    padding: 10px;
+
+}
+.googleAccountContainer p {
+    margin: 0px;
+}
+.googleAccountContainer .googleIcon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    display: none;
+}
+.errorMsgPswd {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    display: none;
+    
+}
+.incorrect {
+    border: 2px red solid;
+}
+.correct {
+    border: 2px green solid;
+}

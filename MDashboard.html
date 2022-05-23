@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/Mdashboard.css">
+    <title>DashBoard</title>
+</head>
+
+<body>
+    <div class="bgContainer">
+        <section class="leftMenu">
+            <div class="leftHeader">
+                <div class="leftLogoContainer">
+                    <img src="./images/letter-m.png" class="leftmenuLogo">
+                    <strong>Project-M</strong>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </div>
+            <div class="leftMenuProfileContainer mb-2">
+                <div class="leftMenuProfileLogo">
+                    <p class="m-0" style="font-size: 1.25rem;">K</p>
+                </div>
+                <strong class=" mt-2">Kiran</strong>
+                <p style="color: #000005;
+                opacity: 0.7;
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 0; font-weight: bold;">HR Manager</p>
+            </div>
+            <strong style="color: #263055; margin-left: 10px;">Navigation Menu</strong>
+            <ul class="menuItems">
+                <li class="listItem">
+                    <img src="./images/shopping-bag.png" class="leftmenuListImage">
+                    <P>Jobs</P>
+                </li>
+                <li class="listItem">
+                    <img src="./images/clipboard.png" class="leftmenuListImage">
+                    <P>Profiles</P>
+                </li>
+                <li class="listItem">
+                    <img src="./images/search-interface-symbol.png" class="leftmenuListImage">
+                    <P>Search</P>
+                </li>
+                <li class="leftmenuReportContainer">
+                    <div class="listItem">
+                        <img src="./images/download.png" class="leftmenuListImage">
+                        <P>Reports</P>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16" style="margin-left: 90px;">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </div>
+                    <div id="leftmenuReports">
+                        <img src="./images/star.png" style="height: 20px; margin-right: 20px;">
+                        <p>Reports</p>
+                    </div>
+                </li>
+                <li class="listItem">
+                    <img src="./images/exit-door.png" class="leftmenuListImage">
+                    <P>Interviews</P>
+                </li>
+            </ul>
+        </section>
+        <section class="rightMenu">
+            <div class="headerContainer">
+                <div class="header1">
+                    <button style="background-color: transparent; border : none; cursor : pointer;">
+                        <img src="./images/logout.png" class="logoutLogo" onclick="logout()">
+                    </button>
+                </div>
+                <div class="header2">
+                    <div class="header2Jobs">
+                        <img src="./images/job-search.png" style="height: 45px; margin-right: 5px;">
+                        <p>Jobs</p>
+                    </div>
+                    <button style="background-color: transparent; border : none; cursor : pointer;">
+                        <img src="./images/add.png" style="height:40px; padding-right: 25px;" onclick="addNewJob()">
+                    </button>
+                </div>
+            </div>
+            <div class="tableContainer">
+                <div class="tableHeader">
+                    <h1>Jobs</h1>
+                    <div class="d-flex flex-row align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                        <input type="search" id="tableSearch" placeholder="Search...." onchange="searchRow()">
+                    </div>
+
+                </div>
+                <div id='table' class="ag-theme-alpine">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="./js/MDashboard.js"></script>
+</body>
+
+</html>
