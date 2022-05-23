@@ -1,0 +1,97 @@
+#viewJdContainer {
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    height: 100vh;
+    overflow: auto;
+    padding: 10px;
+}
+
+#JdHeaderContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#JdHeaderContainer p {
+    font-size: 14px;
+}
+
+#titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#jobTitle {
+    color: blue;
+    font-weight: 400;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#rightHeaderContainerJd {
+    display: flex;
+    align-items: center;
+}
+
+#asigneeText {
+    background-color: rgb(48, 30, 48);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statusText {
+    background-color: lightgrey;
+    color: black;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#joiningDateText {
+    margin-top: 5px;
+    color: gray;
+}
+
+#expiredText {
+    color: red;
+    margin-top: 5px;
+}
+
+#positonText {
+    background-color: lightgray;
+    color: gray;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: 3px;
+
+}
+
+#offeredText {
+    background-color: lightgray;
+    color: gray;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: 3px;
+}
+.jdContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 16px;
+}
