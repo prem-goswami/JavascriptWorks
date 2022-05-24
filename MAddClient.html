@@ -13,7 +13,6 @@
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/Mdashboard.css">
     <link rel="stylesheet" href="./css/MAddJob.css">
     <link rel="stylesheet" href="./css/MAddClient.css">
@@ -97,7 +96,8 @@
                             <div style="display: flex;">
                                 <button class="createJobMenuButton" onclick="goToJobs()">Jobs</button>
                                 <p>|</p>
-                                <button class="createJobMenuButton" onclick="goToDescription()">Job Description </button>
+                                <button class="createJobMenuButton" onclick="goToDescription()">Job Description
+                                </button>
                                 <p>|</p>
                                 <button class="createJobMenuButton">Add Client</button>
                             </div>
@@ -110,23 +110,27 @@
                     <h1>Add Client</h1>
                 </div>
                 <div class="addClientFormContainer">
-                <div class="addClientFormContent">
-                    <div class="container1">
-                        <input type="text" id="name" placeholder="Client Name" class="addClientInputBox">
-                        <input type="text" id = "site"placeholder="Site" class="addClientInputBox">
+                    <div class="addClientFormContent">
+                        <div class="container1">
+                            <input type="text" id="name" placeholder="Client Name" class="addClientInputBox">
+                            <input type="text" id="site" placeholder="Site" class="addClientInputBox">
+                        </div>
+                        <div class="container1">
+                            <input type="number" id="number" placeholder="Contact Number" class="addClientInputBox">
+                            <input type="number" id="extn" placeholder="Extn" class="addClientInputBox">
+                        </div>
+                        <textarea style="height: 100px; width:100%; padding: 10px; margin-bottom: 0px;"
+                            placeholder="Address" id="address"></textarea>
+                        <input type="email" id="email" placeholder="Website" style="width:100%; margin-top:0px;"
+                            class="addClientInputBox">
+                        <div style="margin-top: 20px; margin-left: 350px;">
+                            <button type="button"
+                                style="background-color: blue; height:30px; width: 150px; border: none; color: white; cursor: pointer;"
+                                onclick="submitClientData()">ADD CLIENT</button>
+                        </div>
                     </div>
-                    <div class="container1">
-                        <input type="number" id = "number"placeholder="Contact Number" class="addClientInputBox">
-                        <input type="number" id = "extn"placeholder="Extn" class="addClientInputBox">
-                    </div>
-                    <textarea style="height: 100px; width:100%; padding: 10px; margin-bottom: 0px;" placeholder="Address" id="address"></textarea>
-                    <input type="email" id = "email" placeholder="Website" style="width:100%; margin-top:0px;" class="addClientInputBox">
-                    <div  style="margin-top: 20px; margin-left: 350px;">
-                    <button type = "button" style = "background-color: blue; height:30px; width: 150px; border: none; color: white; cursor: pointer;"onclick = "submitClientData()">ADD CLIENT</button>
-                </div>
                 </div>
             </div>
-        </div>
         </section>
     </div>
     <script type="text/javascript" src="./js/MAddClient.js"></script>

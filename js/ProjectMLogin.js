@@ -3,6 +3,13 @@ let pswdBox = document.getElementById('floatingPassword')
 let errorText = document.getElementById('error')
 let errorTextPswd = document.getElementById('errorPswd')
 
+function displayError(error) {
+    alert('error')
+    console.log(error)
+    let catchError = document.getElementById('catchError')
+    catchError.textContent(error)
+}
+
 function submitForm() {
 
     let emailText = emailBox.value
@@ -16,7 +23,7 @@ function submitForm() {
         pswdBox.classList.add('incorrect')
         errorTextPswd.style.display = "block"
     }
-    if(emailBox.value !== '' && pswdBox.value !== '') {
+    if (emailBox.value !== '' && pswdBox.value !== '') {
         errorTextPswd.style.display = "none"
         errorText.style.display = "none"
 
@@ -43,26 +50,31 @@ function submitForm() {
                 return response.json()
             })
 
-            .then(function(jsonData) {
+            .then(function (jsonData) {
                 console.log(jsonData.access_token)
-                if(jsonData.msg === undefined){
+                if (jsonData.msg === undefined) {
                     localStorage.setItem("token", jsonData.access_token)
-                }else {
+                    window.location.href = "MDashboard.html"
+                } else {
                     emailBox.classList.add("incorrect")
                     pswdBox.classList.add('incorrect')
                 }
+            }).catch((error) => {
+                displayError(error)
             })
     }
-
-
-
-
-    /* console.log(emailBox.value)
-     if(emailBox.value === ''){
-         emailBox.classList.add("incorrect")
-         errorText.style.display = "block"
-     }
-     if(emailBox.value === "kiransaipalika@mobigesture.com" && pswdBox.value === 'kiran@123') {
-         window.location.href = "ahGrid.html"
-     }*/
 }
+
+
+
+
+
+
+/* console.log(emailBox.value)
+ if(emailBox.value === ''){
+     emailBox.classList.add("incorrect")
+     errorText.style.display = "block"
+ }
+ if(emailBox.value === "kiransaipalika@mobigesture.com" && pswdBox.value === 'kiran@123') {
+     window.location.href = "ahGrid.html"
+ }*/

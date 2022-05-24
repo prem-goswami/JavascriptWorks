@@ -46,6 +46,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .statusText {
     background-color: lightgrey;
     color: black;
@@ -88,10 +89,34 @@
     border-radius: 25px;
     margin-top: 3px;
 }
+
 .jdContent {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 16px;
+    width: 80%;
+    margin-left: 100px;
+}
+
+#experienceText {
+    color: blue;
+}
+
+.jdContent svg {
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+}
+
+.jdContent p {
+    color: blue;
+    font-size: 14px;
+}
+
+.jdContent h1 {
+    color: gray;
+    font-size: 18px;
 }
